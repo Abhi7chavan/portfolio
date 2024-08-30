@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chavan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f3f4f6;
+            font-family: "Baloo Bhai 2", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #FFD700;
+        }
+        .navbar-logo{font-size: 18px}
+
+
+        /* Container for animations */
+        .animation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            position: relative;
+            /* background: url('https://www.transparenttextures.com/patterns/white-diamond.png') repeat; */
+            background-image: url(/img/windmil.jpg);
+            background-color: #e3e4e8;
+            overflow: hidden;
+            margin-top: 46px;
+        }
+
+        /* Nature-Themed Animations */
+        .animated-sun {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFD700 0%, #FFA500 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: sun-move 20s linear infinite;
+        }
+
+        @keyframes sun-move {
+            0% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
+
+        .animated-cloud {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            width: 520px;
+            height: 120px;
+            background: url('/img/9-cloud-png-image.png') no-repeat center/contain;
+            animation: cloud-move 15s linear infinite;
+            opacity: 0.8;
+        }
+        
+
+        @keyframes cloud-move {
+            0% { transform: translateX(-150px); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .animated-tree {
+            width: 80px;
+            height: 120px;
+            background: #228B22;
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 0 20px rgba(34, 139, 34, 0.5);
+            animation: tree-bounce 4s ease-in-out infinite;
+        }
+
+        .animated-tree:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 20px;
+            height: 30px;
+            background: #8B4513;
+            border-radius: 0 0 5px 5px;
+            transform: translateX(-50%);
+        }
+
+        @keyframes tree-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .grass {
+            position: absolute;
+            margin-top: 700px;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+            background: url('/img/155802-vector-photos-grass-natural-free-download-image.png') no-repeat center/contain;
+        }
+
+        /* Text */
+        .text-content {
+            text-align: center;
+            color: #333;
+            padding: 20px;
+        }
+
+        .text-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section {
+            background: url('https://www.transparenttextures.com/patterns/white-diamond.png') repeat;
+            background-color: #e3e4e8;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .energy-saving, .environment, .iot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .energy-saving img, .environment img, .iot img {
+            /* max-width: 100px; */
+            margin-bottom: 20px;
+            width: 200px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            margin-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">Abhishek Chavan</div>
+        <div class="navbar-menu">
+            <a href="/main.html">Home</a>
+            <a href="#projects">Expertise</a>
+            <a href="/resume.html">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="/blog.html">Blogs</a>
+            <a href="#about">About Me</a>
+        </div>
+    </div>
+
+    <!-- Main Animation Container -->
+    <div class="animation-container">
+       
+        <!-- Nature-Themed Animations -->
+        <div class="animated-sun"></div>
+        <div class="animated-cloud"></div>
+        <div class="text-content">
+            <h1>Driving Technological Change for a Sustainable Future</h1>
+        </div>
+        <br>
+        <br>
+        <div class="grass"></div>
+    </div>
+
+    <!-- Text Content -->
+    <!-- Energy Saving Section -->
+    <div id="energy-saving" class="section energy-saving">
+        <img src="/img/energy saving.png" alt="Energy Saving">
+        <h2>Energy Saving</h2>
+        <p>Implementing strategies to reduce energy consumption and increase efficiency.</p>
+    </div>
+
+    <!-- Environment Section -->
+    <div id="environment" class="section environment">
+        <img src="/img/env.png" alt="Environment">
+        <h2>Environment</h2>
+        <p>Promoting practices that protect and preserve our natural surroundings.</p>
+    </div>
+
+    <!-- IoT Section -->
+    <div id="iot" class="section iot">
+        <img src="img/iot.png" alt="IoT">
+        <h2>Internet of Things (IoT)</h2>
+        <p>Utilizing IoT technology to enhance energy management and environmental monitoring.</p>
+    </div>
+
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-4 fade-in">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Abhishek Chavan. All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

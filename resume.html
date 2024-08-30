@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Abhishek Chavan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(/windmil.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            font-family: "Baloo Bhai 2", sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo {
+            font-size: 18px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar-menu a:hover {
+            color: #f59e0b;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo text-lg">Abhishek Chavan</div>
+        <div class="navbar-menu hidden md:flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="/blog.html">Blogs</a>
+            <a href="about.html">About Me</a>
+            <a href="#"></a>
+        </div>
+    </div>
+
+
+    <!-- index Content -->
+    <index class="pt-16 pb-10 px-4">
+        <!-- Header Section -->
+        <section class="text-center my-10 fade-in">
+            <h1 class="text-4xl font-bold mb-4">Abhishek Chavan</h1>
+            <h2 class="text-2xl font-semibold text-gray-600">Software Engineer</h2>
+            <p class="text-lg mt-4">
+                <a href="mailto:abhishekchavan7ac@gmail.com" class="text-blue-500">abhishekchavan7ac@gmail.com</a> - 
+                <a href="https://github.com/Abhi7chavan" class="text-blue-500">GitHub</a> - Pune
+            </p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="container mx-auto px-4 my-10 slide-up">
+            <h3 class="text-2xl font-bold mb-4">Work Experience</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold">Software Engineer</h4>
+                <p class="text-blue-500"><a href="https://greenovative.com/">Greenovative Energy Pvt. Ltd - Baner, Pune</a></p>
+                <p class="text-gray-500">December 2022 - Present</p>
+                <p class="mt-2 text-gray-700">Our company leverages Digital Twin technology to help businesses achieve net-zero emissions and meet SDG 2030 goals.</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-700">
+                    <li>Specialize in developing gRPC backend APIs in Python for managing sensor data, alerts, and energy calculations, with a focus on aggregation and consumption.</li>
+                    <li>Design APIs for single-line diagram (SLD) functionality, emphasizing tree data structure handling.</li>
+                    <li>Integrate real-time data handling using Redis, Kafka, and RabbitMQ for scalable solutions.</li>
+                    <li>Optimize codebase and ensure adherence to coding standards using tools like SonarQube, Codelyzer.</li>
+                    <li>Implement deployment scripts using Ansible and Jenkins to automate deployment processes and ensure consistency across environments.</li>
+                    <li>Implement Elasticsearch and Kibana for error logging, monitoring, and dashboard creation across production and development environments.</li>
+                    <li>Automate API testing using Robot Framework and Python for application testing.</li>
+                    <li>Enhance application UI with user-friendly features using Angular.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="container mx-auto px-4 my-10 slide-up">
+            <h3 class="text-2xl font-bold mb-4">Education</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
+                <h4 class="text-lg font-semibold">Manipal University Jaipur (MCA)</h4>
+                <p class="text-gray-600">Remote</p>
+                <p class="text-gray-500">Dec 2021 - Jan 2024</p>
+                <p class="text-gray-700">Master in Computer Application - CGPA: 8.7</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold">Yashavantrao Chavan Institute of Science</h4>
+                <p class="text-gray-600">Satara</p>
+                <p class="text-gray-500">Jun 2018 - Oct 2021</p>
+                <p class="text-gray-700">Bachelor of Science - CGPA: 6.2</p>
+            </div>
+        </section>
+
+        <!-- Project Work -->
+        <section class="container mx-auto px-4 my-10 slide-up">
+            <h3 class="text-2xl font-bold mb-4">Project Work</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold">Energy Management and Saving System for Household Items</h4>
+                <p class="text-gray-700">Technologies: Python, SQLAlchemy, Redis, Kafka, SignalR, Node.js, FastAPI, HTML, CSS, JavaScript</p>
+                <p class="mt-2 text-gray-700">Developed an Energy Management and Saving System for household items, optimizing energy usage and reducing costs.</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-700">
+                    <li>User authentication, permissions, and secure access.</li>
+                    <li>Tab-based interface for real-time monitoring of water, electricity, and weather.</li>
+                    <li>Room-wise sensor selection and item customization.</li>
+                    <li>Real-time data monitoring using Kafka with amCharts visualization.</li>
+                    <li>Weather tab displaying location-based temperature, humidity, current weather conditions, 24-hour forecast, and Air Quality Index (AQI).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="container mx-auto px-4 my-10 slide-up">
+            <h3 class="text-2xl font-bold mb-4">Skills</h3>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Python</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Golang</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">HTML</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">CSS</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">JavaScript</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Angular</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Ansible</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Jenkins</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Elasticsearch</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Redis</span>
+                <span class="bg-blue-500 text-white py-2 px-4 rounded-lg">Kafka</span>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="container mx-auto px-4 my-10 slide-up">
+            <h3 class="text-2xl font-bold mb-4">Certifications</h3>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold">Advanced SQL and Database Management</h4>
+                <p class="text-gray-600">Coursera - Aug 2023</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg mt-4">
+                <h4 class="text-lg font-semibold">Python for Data Science</h4>
+                <p class="text-gray-600">edX - Nov 2023</p>
+            </div>
+        </section>
+    </index>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Abhishek Chavan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

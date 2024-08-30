@@ -1,198 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Abhishek Chavan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            font-family: "Baloo Bhai 2", sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+        font-family: "Baloo Bhai 2", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
 
-        .navbar {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
 
-        .navbar-logo {
-            font-size: 18px;
-        }
+      .navbar-logo {
+        font-size: 18px;
+      }
 
+      .navbar-menu {
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .navbar-menu a:hover {
+        color: #f59e0b;
+      }
+
+      .navbar-button {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
         .navbar-menu {
-            display: flex;
-            gap: 20px;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          width: 100%;
+          padding: 10px;
+          gap: 10px;
+          z-index: 1000;
         }
 
-        .navbar-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .navbar-menu a:hover {
-            color: #f59e0b;
+        .navbar-menu.show {
+          display: flex;
         }
 
         .navbar-button {
-            display: none;
+          display: block;
+          color: #fff;
+          background: none;
+          border: none;
+          cursor: pointer;
         }
+      }
 
-        @media (max-width: 767px) {
-            .navbar-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background-color: #333;
-                width: 100%;
-                padding: 10px;
-                gap: 10px;
-                z-index: 1000;
-            }
-
-            .navbar-menu.show {
-                display: flex;
-            }
-
-            .navbar-button {
-                display: block;
-                color: #fff;
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 50px;
-        }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 50px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
     <div class="navbar">
-        <div class="navbar-logo flex items-center">
-            <span class="ml-2 text-lg font-semibold">Abhishek Chavan</span>
-        </div>
-        <button class="navbar-button" id="menu-button">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-        <div class="navbar-menu">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blogs</a>
-            <a href="about.html">About Me</a>
-            <a href=""></a>
-        </div>
+      <div class="navbar-logo flex items-center">
+        <span class="ml-2 text-lg font-semibold">Abhishek Chavan</span>
+      </div>
+      <button class="navbar-button" id="menu-button">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+      <div class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blogs</a>
+        <a href="about.html">About Me</a>
+        <a href=""></a>
+      </div>
     </div>
 
     <!-- Projects Content -->
     <div class="pt-16 pb-10 px-4">
-        <!-- Projects Section -->
-        <section class="container mx-auto my-40">
-            <h1 class="text-4xl font-bold text-center mb-10 animate__animated animate__fadeIn">My Projects</h1>
-            <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project Card -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate__animated animate__fadeInUp cursor-pointer"
-                    onclick="showProjectDetails(1)">
-                    <img src="greengenious login.jpg" alt="Project Image 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h2 class="text-xl font-semibold mb-2">Greengenious</h2>
-                        <p class="text-gray-600">Click to see more about this project.</p>
-                    </div>
-                </div>
-                <!-- Add more project cards here if needed -->
+      <!-- Projects Section -->
+      <section class="container mx-auto my-40">
+        <h1
+          class="text-4xl font-bold text-center mb-10 animate__animated animate__fadeIn"
+        >
+          My Projects
+        </h1>
+        <div
+          id="projectsGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Project Card -->
+          <div
+            class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate__animated animate__fadeInUp cursor-pointer"
+            onclick="showProjectDetails(1)"
+          >
+            <img
+              src="greengenious login.jpg"
+              alt="Project Image 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Greengenious</h2>
+              <p class="text-gray-600">Click to see more about this project.</p>
             </div>
-            <!-- Dynamic Project Details Sections will be appended here -->
-            <div id="projectDetailsContainer"></div>
-        </section>
+          </div>
+          <!-- Add more project cards here if needed -->
+        </div>
+        <!-- Dynamic Project Details Sections will be appended here -->
+        <div id="projectDetailsContainer"></div>
+      </section>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4 text-center">
-        <div class="container mx-auto">
-            &copy; 2024 Abhishek Chavan. All rights reserved.
-        </div>
+      <div class="container mx-auto">
+        &copy; 2024 Abhishek Chavan. All rights reserved.
+      </div>
     </footer>
 
     <!-- JavaScript for Navbar Toggle -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('menu-button');
-            const menu = document.querySelector('.navbar-menu');
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.querySelector(".navbar-menu");
 
-            menuButton.addEventListener('click', function() {
-                menu.classList.toggle('show');
-            });
-
-            // Initial check to ensure the menu is correctly hidden/shown based on the screen size
-            function updateMenuVisibility() {
-                if (window.innerWidth >= 768) {
-                    menu.classList.remove('show'); // Show the menu in normal layout
-                } else {
-                    menu.classList.add('hidden'); // Ensure the menu is hidden on mobile
-                }
-            }
-
-            window.addEventListener('resize', updateMenuVisibility);
-            updateMenuVisibility(); // Initial check on page load
+        menuButton.addEventListener("click", function () {
+          menu.classList.toggle("show");
         });
 
-        function showProjectDetails(projectId) {
-            const projectDetailsContainer = document.getElementById('projectDetailsContainer');
+        // Initial check to ensure the menu is correctly hidden/shown based on the screen size
+        function updateMenuVisibility() {
+          if (window.innerWidth >= 768) {
+            menu.classList.remove("show"); // Show the menu in normal layout
+          } else {
+            menu.classList.add("hidden"); // Ensure the menu is hidden on mobile
+          }
+        }
 
-            // Clear any previous project details
-            projectDetailsContainer.innerHTML = '';
+        window.addEventListener("resize", updateMenuVisibility);
+        updateMenuVisibility(); // Initial check on page load
+      });
 
-            // Create a new project details div
-            const projectDetails = document.createElement('div');
-            projectDetails.classList.add('mt-10', 'p-6', 'bg-white', 'rounded-lg', 'shadow-lg', 'animate__animated', 'animate__fadeIn');
+      function showProjectDetails(projectId) {
+        const projectDetailsContainer = document.getElementById(
+          "projectDetailsContainer"
+        );
 
-            // Set the content based on the project ID
-            if (projectId === 1) {
-                projectDetails.innerHTML = `
+        // Clear any previous project details
+        projectDetailsContainer.innerHTML = "";
+
+        // Create a new project details div
+        const projectDetails = document.createElement("div");
+        projectDetails.classList.add(
+          "mt-10",
+          "p-6",
+          "bg-white",
+          "rounded-lg",
+          "shadow-lg",
+          "animate__animated",
+          "animate__fadeIn"
+        );
+
+        // Set the content based on the project ID
+        if (projectId === 1) {
+          projectDetails.innerHTML = `
                     <h2 class="text-2xl font-bold mb-4">Greengenious</h2>
                     <div class="grid grid-cols-1 gap-4 mb-4">
                         <!-- Full-width image -->
                         <img src="greengenious login.jpg" alt="Project 1 Image 1" class="w-full h-auto object-cover rounded">
                         <!-- Second image below -->
-                        <img src="sky (1).jpg" alt="Project 1 Image 2" class="w-full h-auto object-cover rounded">
+                        <img src="ss1.jpg" alt="Project 1 Image 2" class="w-full h-auto object-cover rounded">
+                        <!-- Second image below -->
+                        <img src="ss2.jpg" alt="Project 1 Image 2" class="w-full h-auto object-cover rounded">
+                        <!-- Second image below -->
+                        <img src="Dashboard.jpg" alt="Project 1 Image 2" class="w-full h-auto object-cover rounded">
                     </div>
-                    <p class="text-gray-700">Detailed description of Project 1 goes here. You can add more content to elaborate on the project specifics.</p>
+                   
+                                <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold">Energy Management and Saving System for Household Items</h4>
+                <p class="text-gray-700">Technologies: Python, SQLAlchemy, Redis, Kafka, SignalR, Node.js, FastAPI, HTML, CSS, JavaScript</p>
+                <p class="mt-2 text-gray-700">Developed an Energy Management and Saving System for household items, optimizing energy usage and reducing costs.</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-700">
+                    <li>User authentication, permissions, and secure access.</li>
+                    <li>Tab-based interface for real-time monitoring of water, electricity, and weather.</li>
+                    <li>Room-wise sensor selection and item customization.</li>
+                    <li>Real-time data monitoring using Kafka with amCharts visualization.</li>
+                    <li>Weather tab displaying location-based temperature, humidity, current weather conditions, 24-hour forecast, and Air Quality Index (AQI).</li>
+                </ul>
+            </div>
                 `;
-            }
-
-            // Append the new project details section to the container
-            projectDetailsContainer.appendChild(projectDetails);
         }
-    </script>
-</body>
 
+        // Append the new project details section to the container
+        projectDetailsContainer.appendChild(projectDetails);
+      }
+    </script>
+  </body>
 </html>

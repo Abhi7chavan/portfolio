@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Abhishek Chavan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: "Baloo Bhai 2", sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar-menu a:hover {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo flex items-center">
+            <span class="ml-2 text-lg font-semibold">Abhishek Chavan</span>
+        </div>
+        <div class="navbar-menu">
+            <a href="/main.html">Home</a>
+            <a href="#projects">Expertise</a>
+            <a href="/resume.html">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="/blog.html">Blogs</a>
+            <a href="/about.html">About Us</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-16 pb-10 px-4">
+        <!-- Projects Section -->
+        <section class="container mx-auto my-40">
+            <h1 class="text-4xl font-bold text-center mb-10 animate__animated animate__fadeIn">My Projects</h1>
+            <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 animate__animated animate__fadeInUp cursor-pointer"
+                    onclick="showProjectDetails(1)">
+                    <img src="/portfolio/Port/img/greengenious login.jpg" alt="Project Image 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2">Greengenious</h2>
+                        <p class="text-gray-600">Click to see more about this project.</p>
+                    </div>
+                </div>
+                <!-- Add more project cards here if needed -->
+            </div>
+            <!-- Dynamic Project Details Sections will be appended here -->
+            <div id="projectDetailsContainer"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <div class="container mx-auto">
+            &copy; 2024 Abhishek Chavan. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function showProjectDetails(projectId) {
+            const projectDetailsContainer = document.getElementById('projectDetailsContainer');
+
+            // Clear any previous project details
+            projectDetailsContainer.innerHTML = '';
+
+            // Create a new project details div
+            const projectDetails = document.createElement('div');
+            projectDetails.classList.add('mt-10', 'p-6', 'bg-white', 'rounded-lg', 'shadow-lg', 'animate__animated', 'animate__fadeIn');
+
+            // Set the content based on the project ID
+            if (projectId === 1) {
+                projectDetails.innerHTML = `
+                    <h2 class="text-2xl font-bold mb-4">Greengenious</h2>
+                    <div class="grid grid-cols-1 gap-4 mb-4">
+                        <!-- Full-width image -->
+                        <img src="/portfolio/Port/img/greengenious login.jpg" alt="Project 1 Image 1" class="w-full h-auto object-cover rounded">
+                        <!-- Second image below -->
+                        <img src="/portfolio/Port/img/sky.jpg" alt="Project 1 Image 2" class="w-full h-auto object-cover rounded">
+                    </div>
+                    <p class="text-gray-700">Detailed description of Project 1 goes here. You can add more content to elaborate on the project specifics.</p>
+                `;
+            }
+
+            // Append the new project details section to the container
+            projectDetailsContainer.appendChild(projectDetails);
+        }
+    </script>
+</body>
+
+</html>

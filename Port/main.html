@@ -57,7 +57,9 @@
             justify-content: center;
             height: 80vh;
             position: relative;
-            background-image: url(/img/sky.jpg);
+            background-image: url(/portfolio/Port/img/sky\ \(1\).jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
             background-color: #e3e4e8;
             overflow: hidden;
             margin-top: 46px;
@@ -86,9 +88,9 @@
             position: absolute;
             top: 15%;
             left: 10%;
-            width: 520px;
-            height: 120px;
-            background: url('/img/9-cloud-png-image.png') no-repeat center/contain;
+            width: 580px;
+            height: 200px;
+            background: url('/portfolio/Port/img/9-cloud-png-image.png') no-repeat center/contain;
             animation: cloud-move 15s linear infinite;
             opacity: 0.8;
         }
@@ -98,41 +100,6 @@
             100% { transform: translateX(100vw); }
         }
 
-        .animated-tree {
-            width: 80px;
-            height: 120px;
-            background: #228B22;
-            position: relative;
-            border-radius: 10px 10px 0 0;
-            box-shadow: 0 0 20px rgba(34, 139, 34, 0.5);
-            animation: tree-bounce 4s ease-in-out infinite;
-        }
-
-        .animated-tree:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 20px;
-            height: 30px;
-            background: #8B4513;
-            border-radius: 0 0 5px 5px;
-            transform: translateX(-50%);
-        }
-
-        @keyframes tree-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .grass {
-            position: absolute;
-            margin-top: 670px;
-            width: 100%;
-            height: 100%;
-            opacity: 0.9;
-            background: url('/img/155802-vector-photos-grass-natural-free-download-image.png') no-repeat center/contain;
-        }
 
         /* Text */
         .text-content {
@@ -219,11 +186,11 @@
     <div class="navbar">
         <div class="navbar-logo text-lg">Abhishek Chavan</div>
         <div class="navbar-menu hidden md:flex space-x-4">
-            <a href="/main.html">Home</a>
+            <a href="/portfolio/Port/main.html">Home</a>
             <a href="#projects">Expertise</a>
-            <a href="/resume.html">Resume</a>
+            <a href="/portfolio/Port/resume.html">Resume</a>
             <a href="#projects">Projects</a>
-            <a href="/blog.html">Blogs</a>
+            <a href="/portfolio/Port//blog.html">Blogs</a>
             <a href="#about">About Me</a>
         </div>
         <button class="md:hidden text-white focus:outline-none">
@@ -249,21 +216,21 @@
     <!-- Text Content -->
     <!-- Energy Saving Section -->
     <div id="energy-saving" class="section energy-saving">
-        <img src="/img/energy saving.png" alt="Energy Saving" class="w-1/2 md:w-1/4">
+        <img src="/portfolio/Port/img/energy saving.png" alt="Energy Saving" class="w-1/2 md:w-1/4">
         <h2 class="text-2xl md:text-3xl">Energy Saving</h2>
         <p class="text-lg md:text-xl">Implementing strategies to reduce energy consumption and increase efficiency.</p>
     </div>
 
     <!-- Environment Section -->
     <div id="environment" class="section environment">
-        <img src="/img/env.png" alt="Environment" class="w-1/2 md:w-1/4">
+        <img src="/portfolio/Port/img/env.png" alt="Environment" class="w-1/2 md:w-1/4">
         <h2 class="text-2xl md:text-3xl">Environment</h2>
         <p class="text-lg md:text-xl">Promoting practices that protect and preserve our natural surroundings.</p>
     </div>
 
     <!-- IoT Section -->
     <div id="iot" class="section iot">
-        <img src="img/iot.png" alt="IoT" class="w-1/2 md:w-1/4">
+        <img src="/portfolio/Port/img/iot.png" alt="IoT" class="w-1/2 md:w-1/4">
         <h2 class="text-2xl md:text-3xl">IoT</h2>
         <p class="text-lg md:text-xl">Leveraging Internet of Things technology to enhance connectivity and automation.</p>
     </div>

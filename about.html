@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,12 @@
     <style>
         body {
             background-color: #f4f4f4;
-            background-image: url(/windmil.jpg);
+            background-image: url('/windmil.jpg');
             color: #333;
             font-family: "Baloo Bhai 2", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .navbar {
@@ -48,29 +52,75 @@
         .navbar-menu a:hover {
             color: #f59e0b;
         }
+
+        .navbar-button {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px;
+                gap: 10px;
+                z-index: 1000;
+            }
+
+            .navbar-menu.show {
+                display: flex;
+            }
+
+            .navbar-button {
+                display: block;
+                color: #fff;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        /* Additional Styling for Animation */
+        .animate__animated.animate__fadeIn {
+            animation-duration: 1s;
+        }
+
+        .animate__animated.animate__fadeIn.animate__delay-1s {
+            animation-delay: 1s;
+        }
     </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
     <!-- Navbar -->
     <div class="navbar">
         <div class="navbar-logo flex items-center">
             <span class="ml-2 text-lg font-semibold">Abhishek Chavan</span>
         </div>
+        <button class="navbar-button" id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
         <div class="navbar-menu">
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
             <a href="projects.html">Projects</a>
             <a href="blog.html">Blogs</a>
             <a href="about.html">About Me</a>
-            <a href="#"></a>
         </div>
     </div>
 
-    <!-- index Content -->
-    <index class="pt-16 pb-10 px-4">
+    <!-- Index Content -->
+    <div class="pt-16 pb-10 px-4">
         <!-- About Section -->
         <section class="text-center my-10">
-            <img src="Abhishek.jpg" alt="Profile Image" class="w-52 h-52 rounded-full mx-auto mb-4 shadow-lg border-4 border-gray-300 transform transition-transform duration-500 hover:scale-110">
+            <img src="Abhishek.jpg" alt="Profile Image"
+                class="w-52 h-52 rounded-full mx-auto mb-4 shadow-lg border-4 border-gray-300 transform transition-transform duration-500 hover:scale-110">
             <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">About Me</h1>
             <p class="text-lg mt-4 animate__animated animate__fadeIn animate__delay-1s font-medium">
                 Hi, I'm Abhishek Chavan, a passionate software engineer with a deep interest in developing innovative solutions and working on challenging projects. I thrive on creating impactful applications that solve real-world problems and improve user experiences.
@@ -84,23 +134,28 @@
             <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
             <div class="flex justify-center gap-6 mb-6">
                 <a href="mailto:abhishekchavan7ac@gmail.com" class="transform transition-transform duration-300 hover:scale-110">
-                    <img src="https://img.icons8.com/?size=100&id=110895&format=png&color=000000" alt="Email" class="w-8 h-8">
+                    <img src="https://img.icons8.com/?size=100&id=110895&format=png&color=000000" alt="Email"
+                        class="w-8 h-8">
                 </a>
                 <a href="https://github.com/Abhi7chavan" target="_blank" class="transform transition-transform duration-300 hover:scale-110">
-                    <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub" class="w-8 h-8">
+                    <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub"
+                        class="w-8 h-8">
                 </a>
                 <a href="https://www.linkedin.com/in/abhishekchavan" target="_blank" class="transform transition-transform duration-300 hover:scale-110">
-                    <img src="https://img.icons8.com/?size=100&id=60ZV_wYC0BM2&format=png&color=000000" alt="LinkedIn" class="w-8 h-8">
+                    <img src="https://img.icons8.com/?size=100&id=60ZV_wYC0BM2&format=png&color=000000" alt="LinkedIn"
+                        class="w-8 h-8">
                 </a>
                 <a href="https://www.instagram.com/abhi.chavan.7" target="_blank" class="transform transition-transform duration-300 hover:scale-110">
-                    <img src="https://img.icons8.com/?size=100&id=7QPcOVZoGlmf&format=png&color=000000" alt="Instagram" class="w-8 h-8">
+                    <img src="https://img.icons8.com/?size=100&id=7QPcOVZoGlmf&format=png&color=000000" alt="Instagram"
+                        class="w-8 h-8">
                 </a>
             </div>
-            <a href="mailto:abhishekchavan7ac@gmail.com" class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-lg text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:from-blue-600 hover:to-blue-800">
+            <a href="mailto:abhishekchavan7ac@gmail.com"
+                class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-lg text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:from-blue-600 hover:to-blue-800">
                 Get in Touch
             </a>
         </section>
-    </index>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4 text-center">
@@ -108,5 +163,30 @@
             &copy; 2024 Abhishek Chavan. All rights reserved.
         </div>
     </footer>
+
+    <!-- JavaScript for Navbar Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menu-button');
+            const menu = document.querySelector('.navbar-menu');
+
+            menuButton.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+
+            // Initial check to ensure the menu is correctly hidden/shown based on the screen size
+            function updateMenuVisibility() {
+                if (window.innerWidth >= 768) {
+                    menu.classList.remove('show'); // Show the menu in normal layout
+                } else {
+                    menu.classList.add('hidden'); // Ensure the menu is hidden on mobile
+                }
+            }
+
+            window.addEventListener('resize', updateMenuVisibility);
+            updateMenuVisibility(); // Initial check on page load
+        });
+    </script>
 </body>
+
 </html>

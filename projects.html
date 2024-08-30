@@ -13,6 +13,9 @@
             background-color: #f4f4f4;
             color: #333;
             font-family: "Baloo Bhai 2", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .navbar {
@@ -29,9 +32,8 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar-logo img {
-            width: 30px;
-            height: 30px;
+        .navbar-logo {
+            font-size: 18px;
         }
 
         .navbar-menu {
@@ -48,27 +50,71 @@
         .navbar-menu a:hover {
             color: #f59e0b;
         }
+
+        .navbar-button {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px;
+                gap: 10px;
+                z-index: 1000;
+            }
+
+            .navbar-menu.show {
+                display: flex;
+            }
+
+            .navbar-button {
+                display: block;
+                color: #fff;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="navbar-logo flex items-center">
             <span class="ml-2 text-lg font-semibold">Abhishek Chavan</span>
         </div>
+        <button class="navbar-button" id="menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
         <div class="navbar-menu">
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
             <a href="projects.html">Projects</a>
             <a href="blog.html">Blogs</a>
             <a href="about.html">About Me</a>
-            <a href="#"></a>
+            <a href=""></a>
         </div>
     </div>
 
-    <!-- index Content -->
-    <index class="pt-16 pb-10 px-4">
+    <!-- Projects Content -->
+    <div class="pt-16 pb-10 px-4">
         <!-- Projects Section -->
         <section class="container mx-auto my-40">
             <h1 class="text-4xl font-bold text-center mb-10 animate__animated animate__fadeIn">My Projects</h1>
@@ -87,7 +133,7 @@
             <!-- Dynamic Project Details Sections will be appended here -->
             <div id="projectDetailsContainer"></div>
         </section>
-    </index>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4 text-center">
@@ -96,7 +142,29 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Navbar Toggle -->
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menu-button');
+            const menu = document.querySelector('.navbar-menu');
+
+            menuButton.addEventListener('click', function() {
+                menu.classList.toggle('show');
+            });
+
+            // Initial check to ensure the menu is correctly hidden/shown based on the screen size
+            function updateMenuVisibility() {
+                if (window.innerWidth >= 768) {
+                    menu.classList.remove('show'); // Show the menu in normal layout
+                } else {
+                    menu.classList.add('hidden'); // Ensure the menu is hidden on mobile
+                }
+            }
+
+            window.addEventListener('resize', updateMenuVisibility);
+            updateMenuVisibility(); // Initial check on page load
+        });
+
         function showProjectDetails(projectId) {
             const projectDetailsContainer = document.getElementById('projectDetailsContainer');
 

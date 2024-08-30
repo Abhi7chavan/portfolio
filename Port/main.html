@@ -44,8 +44,10 @@
         .navbar-menu a:hover {
             color: #FFD700;
         }
-        .navbar-logo{font-size: 18px}
 
+        .navbar-logo { 
+            font-size: 18px; 
+        }
 
         /* Container for animations */
         .animation-container {
@@ -55,8 +57,7 @@
             justify-content: center;
             height: 80vh;
             position: relative;
-            /* background: url('https://www.transparenttextures.com/patterns/white-diamond.png') repeat; */
-            background-image: url(/img/windmil.jpg);
+            background-image: url(/img/sky.jpg);
             background-color: #e3e4e8;
             overflow: hidden;
             margin-top: 46px;
@@ -91,7 +92,6 @@
             animation: cloud-move 15s linear infinite;
             opacity: 0.8;
         }
-        
 
         @keyframes cloud-move {
             0% { transform: translateX(-150px); }
@@ -127,7 +127,7 @@
 
         .grass {
             position: absolute;
-            margin-top: 700px;
+            margin-top: 670px;
             width: 100%;
             height: 100%;
             opacity: 0.9;
@@ -201,7 +201,6 @@
         }
 
         .energy-saving img, .environment img, .iot img {
-            /* max-width: 100px; */
             margin-bottom: 20px;
             width: 200px;
         }
@@ -212,14 +211,14 @@
             padding: 5px;
             margin-top: 20px;
         }
-       
+
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <div class="navbar-logo">Abhishek Chavan</div>
-        <div class="navbar-menu">
+        <div class="navbar-logo text-lg">Abhishek Chavan</div>
+        <div class="navbar-menu hidden md:flex space-x-4">
             <a href="/main.html">Home</a>
             <a href="#projects">Expertise</a>
             <a href="/resume.html">Resume</a>
@@ -227,16 +226,20 @@
             <a href="/blog.html">Blogs</a>
             <a href="#about">About Me</a>
         </div>
+        <button class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
     </div>
 
     <!-- Main Animation Container -->
     <div class="animation-container">
-       
         <!-- Nature-Themed Animations -->
         <div class="animated-sun"></div>
         <div class="animated-cloud"></div>
         <div class="text-content">
-            <h1>Driving Technological Change for a Sustainable Future</h1>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl">Driving Technological Change for a Sustainable Future</h1>
         </div>
         <br>
         <br>
@@ -246,31 +249,28 @@
     <!-- Text Content -->
     <!-- Energy Saving Section -->
     <div id="energy-saving" class="section energy-saving">
-        <img src="/img/energy saving.png" alt="Energy Saving">
-        <h2>Energy Saving</h2>
-        <p>Implementing strategies to reduce energy consumption and increase efficiency.</p>
+        <img src="/img/energy saving.png" alt="Energy Saving" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">Energy Saving</h2>
+        <p class="text-lg md:text-xl">Implementing strategies to reduce energy consumption and increase efficiency.</p>
     </div>
 
     <!-- Environment Section -->
     <div id="environment" class="section environment">
-        <img src="/img/env.png" alt="Environment">
-        <h2>Environment</h2>
-        <p>Promoting practices that protect and preserve our natural surroundings.</p>
+        <img src="/img/env.png" alt="Environment" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">Environment</h2>
+        <p class="text-lg md:text-xl">Promoting practices that protect and preserve our natural surroundings.</p>
     </div>
 
     <!-- IoT Section -->
     <div id="iot" class="section iot">
-        <img src="img/iot.png" alt="IoT">
-        <h2>Internet of Things (IoT)</h2>
-        <p>Utilizing IoT technology to enhance energy management and environmental monitoring.</p>
+        <img src="img/iot.png" alt="IoT" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">IoT</h2>
+        <p class="text-lg md:text-xl">Leveraging Internet of Things technology to enhance connectivity and automation.</p>
     </div>
 
-     <!-- Footer -->
-     <footer class="bg-gray-800 text-white py-4 fade-in">
-        <div class="container mx-auto text-center">
-            &copy; 2024 Abhishek Chavan. All rights reserved.
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Abhishek Chavan. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>

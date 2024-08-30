@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chavan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Nerko+One&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f3f4f6;
+            font-family: "Baloo Bhai 2", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #FFD700;
+        }
+
+        .navbar-logo { 
+            font-size: 18px; 
+        }
+
+        /* Container for animations */
+        .animation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            position: relative;
+            background-image: url(/portfolio/Port/img/sky\ \(1\).jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #e3e4e8;
+            overflow: hidden;
+            margin-top: 46px;
+        }
+
+        /* Nature-Themed Animations */
+        .animated-sun {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFD700 0%, #FFA500 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: sun-move 20s linear infinite;
+        }
+
+        @keyframes sun-move {
+            0% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
+
+        .animated-cloud {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            width: 580px;
+            height: 200px;
+            background: url('/portfolio/Port/img/9-cloud-png-image.png') no-repeat center/contain;
+            animation: cloud-move 15s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes cloud-move {
+            0% { transform: translateX(-150px); }
+            100% { transform: translateX(100vw); }
+        }
+
+
+        /* Text */
+        .text-content {
+            text-align: center;
+            color: #333;
+            padding: 20px;
+        }
+
+        .text-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section {
+            background: url('https://www.transparenttextures.com/patterns/white-diamond.png') repeat;
+            background-color: #e3e4e8;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .energy-saving, .environment, .iot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .energy-saving img, .environment img, .iot img {
+            margin-bottom: 20px;
+            width: 200px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo text-lg">Abhishek Chavan</div>
+        <div class="navbar-menu hidden md:flex space-x-4">
+            <a href="/portfolio/Port/main.html">Home</a>
+            <a href="/portfolio/Port/resume.html">Resume</a>
+            <a href="/portfolio/Port/projects.html">Projects</a>
+            <a href="/portfolio/Port//blog.html">Blogs</a>
+            <a href="/portfolio/Port/about.html">About Me</a>
+            <a href="#"></a>
+        </div>
+        <button class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Animation Container -->
+    <div class="animation-container">
+        <!-- Nature-Themed Animations -->
+        <div class="animated-sun"></div>
+        <div class="animated-cloud"></div>
+        <div class="text-content">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl">Driving Technological Change for a Sustainable Future</h1>
+        </div>
+        <br>
+        <br>
+        <section class="container mx-auto px-4 my-10 text-center">
+            <a href="mailto:abhishekchavan7ac@gmail.com" class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-lg text-lg font-semibold transform transition-transform duration-300 hover:scale-105 hover:from-blue-600 hover:to-blue-800">
+                Get in Touch
+            </a>
+        </section>
+    </div>
+
+    <!-- Text Content -->
+    <!-- Energy Saving Section -->
+    <div id="energy-saving" class="section energy-saving">
+        <img src="/portfolio/Port/img/energy saving.png" alt="Energy Saving" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">Energy Saving</h2>
+        <p class="text-lg md:text-xl">Implementing strategies to reduce energy consumption and increase efficiency.</p>
+    </div>
+
+    <!-- Environment Section -->
+    <div id="environment" class="section environment">
+        <img src="/portfolio/Port/img/env.png" alt="Environment" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">Environment</h2>
+        <p class="text-lg md:text-xl">Promoting practices that protect and preserve our natural surroundings.</p>
+    </div>
+
+    <!-- IoT Section -->
+    <div id="iot" class="section iot">
+        <img src="/portfolio/Port/img/iot.png" alt="IoT" class="w-1/2 md:w-1/4">
+        <h2 class="text-2xl md:text-3xl">IoT</h2>
+        <p class="text-lg md:text-xl">Leveraging Internet of Things technology to enhance connectivity and automation.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Abhishek Chavan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
